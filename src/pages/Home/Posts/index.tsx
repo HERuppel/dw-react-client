@@ -39,7 +39,7 @@ const Posts = (): JSX.Element => {
         setLoading(false);
       }
     })();
-  }, [fetchPosts, posts]);
+  }, [fetchPosts]);
 
   const refreshPage = useCallback(async () => {
     try {
