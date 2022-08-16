@@ -8,6 +8,14 @@ import Home from '../pages/Home';
 const AppRoutes = (): JSX.Element => {
   const { user } = useAuth();
 
+  if (!user.id)
+    return (
+      <Routes>
+        <Route path='/auth/*' element={<Auth />} />
+        <Route path='*' element={<Navigate to='/auth/login' />} />
+      </Routes>
+    );
+
   return (
     <Routes>
       <Route path='/' element={<Navigate to={user.id ? '/home' : '/auth'} />} />
