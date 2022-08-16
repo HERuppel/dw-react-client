@@ -12,7 +12,7 @@ const SideBar = (): JSX.Element => {
   const menu = (
     <div>
       <div className={classes.header}>
-        <Typography variant='h4'>KRUD</Typography>
+        <Typography variant='h4'>RVB</Typography>
       </div>
       <List>
         <NavLink

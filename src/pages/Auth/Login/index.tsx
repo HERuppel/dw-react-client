@@ -43,7 +43,7 @@ const Login = (): JSX.Element => {
     <Grid container className={classes.container}>
       <Grid className={classes.left} item xs={6}>
         <Typography style={{ color: '#FFF' }} variant='h2'>
-          Bem-vindo(a) ao KRUD!
+          Bem-vindo(a) ao RVB!
         </Typography>
       </Grid>
       <Grid className={classes.right} item xs={6}>

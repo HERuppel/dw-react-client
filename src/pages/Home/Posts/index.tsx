@@ -60,7 +60,7 @@ const Posts = (): JSX.Element => {
   return (
     <Container className={classes.container}>
       <Typography variant='h4' color='primary'>
-        Bem-vindo(a) ao KRUD!
+        Bem-vindo(a) ao RVB!
       </Typography>
       <Box className={classes.content}>
         <div className={classes.header}>
