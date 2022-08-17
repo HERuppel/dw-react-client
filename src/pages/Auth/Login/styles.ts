@@ -5,7 +5,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     container: {
       height: '100vh',
       width: '100%',
-      backgroundColor: theme.palette.primary.main,
+      background: 'linear-gradient(#00ACCE, #0096DA)',
     },
     left: {
       display: 'flex',
