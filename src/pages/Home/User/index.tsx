@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useStyles } from './styles';
 
 import { Typography } from '@material-ui/core';
+import { Person } from '@material-ui/icons';
 import { useAuth } from '../../../hooks/Auth';
 import { usePost } from '../../../hooks/Post';
 import PostCard from '../../../components/PostCard';
@@ -39,6 +40,9 @@ const User = (): JSX.Element => {
   return (
     <div className={classes.container}>
       <div className={classes.header}>
+        <div style={{ backgroundColor: '#a5a5a5', borderRadius: '50%', padding: 10 }}>
+          <Person style={{ fontSize: 100, color: '#FFF' }} />
+        </div>
         <div className={classes.userInfos}>
           <Typography variant='h5' color='textPrimary'>
             {user.name}
