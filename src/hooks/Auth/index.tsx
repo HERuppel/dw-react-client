@@ -23,6 +23,7 @@ interface AuthContextData {
   user: User;
   signIn: (credentials: AuthCredentials) => Promise<void>;
   signUp: (userData: SignUpData) => Promise<Response<User>>;
+  signOut: () => void;
 }
 
 const AuthContext = createContext<AuthContextData>({} as AuthContextData);
@@ -56,12 +57,18 @@ export const AuthProvider: React.FC = ({ children }) => {
     return data;
   }, []);
 
+  const signOut = (): void => {
+    localStorage.clear();
+    setUser({} as User);
+  };
+
   return (
     <AuthContext.Provider
       value={{
         user,
         signIn,
         signUp,
+        signOut,
       }}
     >
       {children}

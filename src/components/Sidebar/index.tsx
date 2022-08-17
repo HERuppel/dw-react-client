@@ -1,12 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { Drawer, List, ListItemText, Typography } from '@material-ui/core';
-import { Person, Textsms } from '@material-ui/icons';
+import { Drawer, IconButton, List, ListItemText, Typography } from '@material-ui/core';
+import { Person, Textsms, ExitToApp } from '@material-ui/icons';
 
 import useStyles from './styles';
+import { useAuth } from '../../hooks/Auth';
 
 const SideBar = (): JSX.Element => {
+  const { signOut } = useAuth();
   const classes = useStyles();
 
   const menu = (
@@ -45,6 +47,10 @@ const SideBar = (): JSX.Element => {
         }}
       >
         {menu}
+        <IconButton onClick={signOut} style={{ borderRadius: 0 }}>
+          <ExitToApp style={{ color: '#FFF', paddingRight: 10 }} />
+          <Typography style={{ color: '#FFF' }}>Logout</Typography>
+        </IconButton>
       </Drawer>
     </nav>
   );
