@@ -8,5 +8,5 @@ module.exports = {
   printWidth: 110,
   tabWidth: 2,
   jsxSingleQuote: true,
-  endOfLine: 'crlf'
+  endOfLine: 'lf'
 };
