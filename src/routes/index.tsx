@@ -29,7 +29,7 @@ const AppRoutes = (): JSX.Element => {
           </PostProvider>
         }
       />
-      <Route path='/auth/*' element={<Auth />} />
+      <Route path='/auth/*' element={<Navigate to={user.id ? '/home' : '/auth'} />} />
       <Route path='*' element={<Navigate to={user.id ? '/home' : '/auth'} />} />
     </Routes>
   );
