@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme: Theme) =>
     drawerPaper: {
       width: 250,
       backgroundColor: theme.palette.primary.dark,
+      background: 'linear-gradient(#00ACCE, #0096DA)',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-between',
@@ -37,7 +38,7 @@ const useStyles = makeStyles((theme: Theme) =>
       transition: '300ms',
 
       '&:hover': {
-        background: theme.palette.primary.main,
+        background: theme.palette.primary.dark,
       },
     },
     welcome: {
@@ -60,10 +61,10 @@ const useStyles = makeStyles((theme: Theme) =>
       alignItems: 'center',
       padding: 10,
       transition: '300ms',
-      background: theme.palette.primary.main,
+      background: theme.palette.primary.dark,
 
       '&:hover': {
-        background: theme.palette.primary.main,
+        background: theme.palette.primary.dark,
       },
     },
   }),
