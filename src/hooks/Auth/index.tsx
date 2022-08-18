@@ -2,29 +2,10 @@ import React, { createContext, useCallback, useContext, useState } from 'react';
 import { User } from '../../@types/User';
 import { Response } from '../../@types/Response';
 import { api } from '../../services/api';
-
-interface AuthCredentials {
-  email: string;
-  password: string;
-}
-
-interface SignUpData {
-  email: string;
-  name: string;
-  password: string;
-}
-
-interface LoginResponse {
-  user: User;
-  token: string;
-}
-
-interface AuthContextData {
-  user: User;
-  signIn: (credentials: AuthCredentials) => Promise<void>;
-  signUp: (userData: SignUpData) => Promise<Response<User>>;
-  signOut: () => void;
-}
+import { AuthCredentials } from './models/AuthCredentials';
+import { SignUpData } from './models/SignUpData';
+import { LoginResponse } from './models/LoginResponse';
+import { AuthContextData } from './models/AuthContextData';
 
 const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 
