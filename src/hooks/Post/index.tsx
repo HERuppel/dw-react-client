@@ -2,13 +2,7 @@ import React, { createContext, useCallback, useContext, useState } from 'react';
 import { Post } from '../../@types/Post';
 import { Response } from '../../@types/Response';
 import { api } from '../../services/api';
-
-interface PostContextData {
-  posts: Post[];
-  addPost: (newPost: Post) => Promise<Response<Post>>;
-  fetchPosts: () => Promise<void>;
-  fetchPostsByUser: (userId: string) => Promise<Response<Post[]>>;
-}
+import { PostContextData } from './models/PostContextData';
 
 const PostContext = createContext<PostContextData>({} as PostContextData);
 
