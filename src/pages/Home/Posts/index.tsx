@@ -39,6 +39,7 @@ const Posts = (): JSX.Element => {
         setLoading(false);
       }
     })();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fetchPosts]);
 
   const refreshPage = useCallback(async () => {
